@@ -101,6 +101,7 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
   - 已人工切分内容 → `separator`
   - 内容长短不稳定 → `auto-split`
 - 输出尺寸：默认 1080 × 1440
+- **图片生成模型规则：默认一律使用 5.0 模型**（如即梦 / Seedream 出图）；只有老大明确要求对比版本或指定其他模型时，才允许临时切换。
 
 ### 已知限制
 
