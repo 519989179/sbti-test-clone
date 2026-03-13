@@ -217,3 +217,43 @@ while(f && depth < 20) {
 | 今日头条 | browser 直接操作 | ✅ 已发布 |
 | 百家号 | browser + React Fiber 注入 | ⚠️ 封面卡点 |
 | 搜狐号 | 未尝试 | ⬜ 待做 |
+
+### 2026-03-13 | Gemini 改图 / 云雾中转
+
+**问题：** 明明前一天已经能用 `gemini-3.1-flash-image-preview` 改图，第二天执行时却反复跑偏到本地手工改图，导致交付变慢。
+
+**根本原因：**
+- 只记住了“改图默认用 Gemini”，但**没有把实际可用调用链路写进工作手册**
+- 今天执行时没有第一时间命中“云雾中转 + Gemini 图片编辑接口”这条已验证路径
+- 把“规则”记住了，但把“怎么调起来”漏了
+
+**已验证可用链路：**
+1. 使用云雾中转基址：`https://yunwu.ai`
+2. 模型名：`gemini-3.1-flash-image-preview`
+3. 调用接口：
+   `POST https://yunwu.ai/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key=<API_KEY>`
+4. 请求体核心格式：
+   - `contents[0].parts[0].text` 放编辑指令
+   - `contents[0].parts[1].inline_data` 放原图 base64
+   - `generationConfig.responseModalities = ["TEXT", "IMAGE"]`
+5. 从返回 JSON 的 `candidates[0].content.parts[*].inlineData.data`（或 `inline_data.data`）取 base64 图片并落盘
+
+**关键代码：**
+```python
+payload = {
+  "contents": [{
+    "parts": [
+      {"text": "只修改横幅文字，其他全部不变"},
+      {"inline_data": {"mime_type": "image/png", "data": b64}}
+    ]
+  }],
+  "generationConfig": {"responseModalities": ["TEXT", "IMAGE"]}
+}
+
+url = f"https://yunwu.ai/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key={API_KEY}"
+```
+
+**经验：**
+- **新图生成默认 5.0；改已有图默认 Gemini**，不要再临时用本地 PIL 顶替
+- 以后只要是“改字 / 局部修改 / 参考图编辑”，先走上面这条 Gemini 链路
+- 不仅记规则，还要把**基址 / 模型名 / 接口路径 / 返回字段**一起记住，否则还是会忘
