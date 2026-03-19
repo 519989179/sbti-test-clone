@@ -87,7 +87,9 @@
 - **改图边界规则：如果老大只要求改某一处（如标题/单行文字/局部元素），就只能改那一处；没有明确指令，绝对不要擅自改其他字、其他元素、版式或文案。**
 - Gemini 改图当前已确认可用的实际调用方式：走**云雾中转**，基址用 `https://yunwu.ai`，模型名用 **`gemini-3.1-flash-image-preview`**，可直接调 `v1beta/models/<model>:generateContent` 做图片编辑。
 - 艾乐已明确要求：这类流程不仅要写进日记，还要同步到**长期记忆 + 工作手册 / TOOLS.md**，避免再次“记住了规则但执行时跑偏”。
-- 艾乐已于 2026-03-19 明确：图片编辑走**云雾中转**，不是直连 Gemini；可复用 API Key：`sk-bIgi8tj771c8tayuAwYseBDjfuidXmmU8WM3EAGImNNVIDNT`；文档：`https://yunwu.apifox.cn/`；模型名：`gemini-3.1-flash-image-preview`。卷卷后续应直接复用，不要重复索要，也不要再把这把 key 当作 Google 官方直连 key 使用。
+- 艾乐已于 2026-03-19 明确：图片编辑走**云雾中转**，不是直连 Gemini；文档参考：`https://yunwu.apifox.cn/`；模型名：`gemini-3.1-flash-image-preview`。卷卷后续应直接复用既有可用配置，不要重复索要，也不要把中转配置误当成 Google 官方直连方式。
+- 艾乐于 2026-03-19 再次明确下硬规则：**凡是修改已有图片，必须默认使用 `gemini-3.1-flash-image-preview`**；除非他明确同意切换，否则不要再用本地手工改图或其他替代链路顶上。
+- 2026-03-19 已补齐并验证今日标准改图处理方式：收到用户现有图片后，先按“只改指定内容、其他不动”写清编辑指令；默认走**云雾中转 + `gemini-3.1-flash-image-preview`**；请求体使用 `contents[].parts = [text, inline_data(base64原图)]`，并设置 `generationConfig.responseModalities = ["TEXT", "IMAGE"]`；从返回结果里的图片字段取出 base64 落盘；完成后**直接把图片发到聊天里**，不要只给路径，不要先用本地手工/Pillow 顶替，也不要在未确认可见时说“发好了”。
 
 ## 运行原则
 - 短期记忆不可靠，想长期保留的内容必须写进文件。
