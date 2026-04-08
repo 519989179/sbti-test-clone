@@ -1,3 +1,12 @@
+---
+type: overview
+status: active
+updated: 2026-04-08
+tags:
+  - knowledge-base
+  - overview
+---
+
 # 知识库总览
 
 ## 核心结论
@@ -38,6 +47,7 @@
 
 ## 当前状态
 - 第一版骨架已建立
+- Obsidian 首页已建立：[[home]]
 - 已有首个方法模式页：`llm-wiki-pattern`
 - 后续应尽快把书稿与现有项目资料逐步迁入
 

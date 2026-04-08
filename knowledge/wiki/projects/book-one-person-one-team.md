@@ -1,3 +1,14 @@
+---
+type: project
+status: active
+priority: highest
+updated: 2026-04-08
+tags:
+  - project
+  - book
+  - manuscript
+---
+
 # 《一个人就是一个团队》书稿项目
 
 ## 核心结论

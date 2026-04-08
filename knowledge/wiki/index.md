@@ -1,6 +1,16 @@
+---
+type: index
+status: active
+updated: 2026-04-08
+tags:
+  - knowledge-base
+  - index
+---
+
 # 知识库索引
 
 ## 总览
+- [[home]] — Obsidian 入口首页
 - [[overview]] — 知识库当前范围、优先级与使用方式
 
 ## 项目 Projects

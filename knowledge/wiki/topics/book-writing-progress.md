@@ -1,3 +1,13 @@
+---
+type: topic
+status: active
+updated: 2026-04-08
+tags:
+  - topic
+  - book
+  - progress
+---
+
 # 书稿写作进度
 
 ## 核心结论

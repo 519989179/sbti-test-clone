@@ -1,3 +1,12 @@
+---
+type: log
+status: active
+updated: 2026-04-08
+tags:
+  - knowledge-base
+  - log
+---
+
 # 知识库日志
 
 ## [2026-04-08] bootstrap | personal knowledge base initialized

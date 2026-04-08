@@ -1,3 +1,13 @@
+---
+type: topic
+status: active
+updated: 2026-04-08
+tags:
+  - topic
+  - book
+  - outline
+---
+
 # 书稿正式大纲地图
 
 ## 核心结论
