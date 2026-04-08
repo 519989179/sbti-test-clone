@@ -23,3 +23,10 @@ tags:
 - 新建大纲地图页：`topics/book-outline-map.md`
 - 新建写作进度页：`topics/book-writing-progress.md`
 - 更新书稿项目页与知识库索引
+
+## [2026-04-08] productize | obsidian dashboards
+- 将 `home.md` 从普通导航页升级为知识库控制台
+- 新增 `dashboard-book.md`：书稿专属控制台
+- 新增 `dashboard-ops.md`：GEO / 小红书运营控制台
+- 为核心 project 页面补充统一 frontmatter，便于 Dataview 聚合
+- 更新 `README-OBSIDIAN.md` 与 `index.md`，让入口更明确

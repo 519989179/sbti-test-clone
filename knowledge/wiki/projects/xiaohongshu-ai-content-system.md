@@ -1,3 +1,14 @@
+---
+type: project
+status: active
+priority: high
+updated: 2026-04-08
+tags:
+  - project
+  - xiaohongshu
+  - content-system
+---
+
 # 小红书 AI 内容体系项目
 
 ## 核心结论

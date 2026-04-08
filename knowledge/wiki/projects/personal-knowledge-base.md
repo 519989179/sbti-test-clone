@@ -1,3 +1,13 @@
+---
+type: project
+status: active
+priority: high
+updated: 2026-04-08
+tags:
+  - project
+  - knowledge-base
+---
+
 # 个人知识库项目
 
 ## 核心结论

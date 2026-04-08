@@ -10,8 +10,10 @@ tags:
 # 知识库索引
 
 ## 总览
-- [[home]] — Obsidian 入口首页
+- [[home]] — 知识库控制台首页
 - [[overview]] — 知识库当前范围、优先级与使用方式
+- [[dashboard-book]] — 书稿专属控制台
+- [[dashboard-ops]] — GEO / 内容运营控制台
 
 ## 项目 Projects
 - [[projects/book-one-person-one-team]] — 《一个人就是一个团队》书稿项目页

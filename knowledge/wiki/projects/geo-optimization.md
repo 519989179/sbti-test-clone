@@ -1,3 +1,14 @@
+---
+type: project
+status: active
+priority: high
+updated: 2026-04-08
+tags:
+  - project
+  - geo
+  - content-ops
+---
+
 # 96编辑器 GEO 优化项目
 
 ## 核心结论

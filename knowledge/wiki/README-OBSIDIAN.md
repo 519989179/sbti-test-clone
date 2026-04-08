@@ -7,6 +7,8 @@
 
 ## 打开后先看
 - `home.md`
+- `dashboard-book.md`
+- `dashboard-ops.md`
 - `overview.md`
 - `index.md`
 
